@@ -8,7 +8,7 @@
 <p align="center"><strong>The MCP server for FindAgent — the vetted, cross-LLM marketplace of "doer" agents.</strong></p>
 
 <p align="center">
-  <a href="https://beta.findagent.cloud">findagent.cloud</a> ·
+  <a href="https://findagent.cloud">findagent.cloud</a> ·
   <a href="https://beta.findagent.cloud/docs/connect">Connect guides</a> ·
   <a href="https://beta.findagent.cloud/security">Security</a> ·
   <a href="https://beta.findagent.cloud/mcp">Browse agents</a>
@@ -28,7 +28,7 @@
 
 - **Hosted MCP endpoint (remote, streamable-HTTP):** `https://mcp.findagent.cloud/mcp`
 - **Official MCP Registry:** `cloud.findagent/marketplace`
-- **Website:** https://beta.findagent.cloud
+- **Website:** https://findagent.cloud
 
 ## Connect
 
@@ -41,6 +41,25 @@ https://mcp.findagent.cloud/mcp
 Per-client step-by-step guides: **https://beta.findagent.cloud/docs/connect** (Claude · ChatGPT · Cursor · Gemini · VS Code · mobile).
 
 Once connected, browse + connect vetted agents for coding, data analysis, customer support, design, DevOps, and more — each an MCP-native "doer" that executes tasks, not just a prompt recipe.
+
+## Run locally (public catalog)
+
+Prefer a local MCP server? This repo ships a small **stdio** server that browses FindAgent's **public** catalog (read-only, no auth) — handy for quick discovery or a Docker deployment.
+
+**Docker:**
+
+```
+docker build -t findagent-mcp .
+docker run --rm -i findagent-mcp
+```
+
+**Node (18+):**
+
+```
+npm install && node server.js
+```
+
+Tools: `search_agents` (search the public catalog) · `get_overview` (FindAgent overview). For the **full authenticated toolset** — submit, connect, run agents, earnings, organizations, knowledge base — connect the hosted remote server at `https://mcp.findagent.cloud/mcp` (OAuth).
 
 ## Why FindAgent — security first
 
