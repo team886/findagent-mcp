@@ -9,6 +9,9 @@
   "engines": {
     "node": ">=18"
   },
+  "scripts": {
+    "test": "node test.js"
+  },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.30.0"
