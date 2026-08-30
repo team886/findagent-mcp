@@ -1,0 +1,14 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "cloud.findagent/marketplace",
+  "title": "FindAgent",
+  "description": "The vetted, cross-LLM marketplace of doer agents — itself an MCP server.",
+  "version": "1.0.0",
+  "websiteUrl": "https://findagent.cloud",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.findagent.cloud/mcp"
+    }
+  ]
+}

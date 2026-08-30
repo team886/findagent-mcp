@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 130" fill="none" role="img" aria-label="FindAgent">
+  <g transform="translate(-19.3,-16.3) scale(0.307)">
+    <circle cx="230" cy="230" r="112" fill="none" stroke="#fafafa" stroke-width="24"/>
+    <line x1="317.7" y1="317.7" x2="405.4" y2="405.4" stroke="#fafafa" stroke-width="24" stroke-linecap="round"/>
+    <rect x="188" y="188" width="84" height="84" fill="#fafafa"/>
+  </g>
+  <text x="130" y="82" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="58" font-weight="600" letter-spacing="-1.5">
+    <tspan fill="#a1a1aa" font-weight="500">Find</tspan><tspan fill="#fafafa">Agent</tspan>
+  </text>
+</svg>
