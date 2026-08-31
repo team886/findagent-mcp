@@ -6,6 +6,10 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+  statuses: write
+
 jobs:
   smoke:
     runs-on: ubuntu-latest
@@ -16,3 +20,14 @@ jobs:
           node-version: 20
       - run: npm ci
       - run: npm test
+      # Publish a commit STATUS (not just an Actions check-run) so external readers that
+      # poll the legacy combined-status API (/commits/{sha}/status) see the CI result.
+      - name: Publish commit status
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api -X POST "repos/${{ github.repository }}/statuses/${{ github.sha }}" \
+            -f state="${{ job.status == 'success' && 'success' || 'failure' }}" \
+            -f context="ci/smoke" \
+            -f description="MCP handshake + tools/list"
