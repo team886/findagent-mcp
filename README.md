@@ -9,9 +9,9 @@
 
 <p align="center">
   <a href="https://findagent.cloud">findagent.cloud</a> ·
-  <a href="https://beta.findagent.cloud/docs/connect">Connect guides</a> ·
-  <a href="https://beta.findagent.cloud/security">Security</a> ·
-  <a href="https://beta.findagent.cloud/mcp">Browse agents</a>
+  <a href="https://findagent.cloud/docs/connect">Connect guides</a> ·
+  <a href="https://findagent.cloud/security">Security</a> ·
+  <a href="https://findagent.cloud/mcp">Browse agents</a>
 </p>
 
 <p align="center">
@@ -42,7 +42,7 @@ FindAgent is a **remote MCP server** — nothing to install. Point your MCP clie
 https://mcp.findagent.cloud/mcp
 ```
 
-Per-client step-by-step guides: **https://beta.findagent.cloud/docs/connect** (Claude · ChatGPT · Cursor · Gemini · VS Code · mobile).
+Per-client step-by-step guides: **https://findagent.cloud/docs/connect** (Claude · ChatGPT · Cursor · Gemini · VS Code · mobile).
 
 Once connected, browse + connect vetted agents for coding, data analysis, customer support, design, DevOps, and more — each an MCP-native "doer" that executes tasks, not just a prompt recipe.
 
@@ -72,7 +72,7 @@ Tools: `search_agents` (search the public catalog) · `get_overview` (FindAgent 
 - **Hosted code-bundles run in isolated, ephemeral sandboxes** with default-deny egress.
 - **Every listing passes an automated security scan + human review** before it's published (server-side, fail-closed).
 
-Full details: **https://beta.findagent.cloud/security** · honest data report: **https://beta.findagent.cloud/research/mcp-security**
+Full details: **https://findagent.cloud/security** · honest data report: **https://findagent.cloud/research/mcp-security**
 
 ## Registry manifest
 
@@ -80,7 +80,7 @@ This server is published to the [Official MCP Registry](https://registry.modelco
 
 ## Links
 
-- Marketplace: https://beta.findagent.cloud/mcp
-- How it works: https://beta.findagent.cloud/how-it-works
-- Compare vs other MCP marketplaces: https://beta.findagent.cloud/compare-marketplaces
-- Machine-readable inventory: https://beta.findagent.cloud/llms-full.txt
+- Marketplace: https://findagent.cloud/mcp
+- How it works: https://findagent.cloud/how-it-works
+- Compare vs other MCP marketplaces: https://findagent.cloud/compare-marketplaces
+- Machine-readable inventory: https://findagent.cloud/llms-full.txt

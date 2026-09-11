@@ -13,7 +13,7 @@ import { Server } from '@modelcontextprotocol/sdk/server/index.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js'
 
-const BASE = (process.env.FINDAGENT_BASE_URL ?? 'https://beta.findagent.cloud').replace(/\/+$/, '')
+const BASE = (process.env.FINDAGENT_BASE_URL ?? 'https://findagent.cloud').replace(/\/+$/, '')
 const HOSTED_MCP = 'https://mcp.findagent.cloud/mcp'
 const FOOTER = `\n\n---\nThis local server browses FindAgent's PUBLIC catalog (read-only). For the full authenticated toolset — submit, connect, run agents, earnings, organizations, knowledge base — connect the hosted MCP server at ${HOSTED_MCP} (OAuth).`
 
