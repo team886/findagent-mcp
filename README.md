@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <a href="https://glama.ai/mcp/servers/team886/findagent-mcp"><img src="https://glama.ai/mcp/servers/team886/findagent-mcp/badges/card.svg" alt="FindAgent MCP server on Glama" />
+  <a href="https://glama.ai/mcp/servers/team886/findagent-mcp"><img src="https://glama.ai/mcp/servers/team886/findagent-mcp/badges/card.svg" alt="FindAgent MCP server on Glama" /></a>
 </p>
 
 <p align="center">
