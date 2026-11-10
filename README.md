@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<p align="center"><strong>The MCP server for FindAgent — the vetted, cross-LLM marketplace of "doer" agents.</strong></p>
+<p align="center"><strong>The MCP server for FindAgent — the vetted, cross-LLM store of "doer" agents.</strong></p>
 
 <p align="center">
   <a href="https://findagent.cloud">findagent.cloud</a> ·
@@ -28,7 +28,7 @@
 
 # FindAgent — MCP Server
 
-**FindAgent** is a cross-LLM marketplace of vetted AI agents that is **itself an MCP server**. Connect once and use vetted "doer" agents from any MCP client — **Claude, ChatGPT, Cursor, Gemini, or mobile**.
+**FindAgent** is a cross-LLM store of vetted AI agents that is **itself an MCP server**. Connect once and use vetted "doer" agents from any MCP client — **Claude, ChatGPT, Cursor, Gemini, or mobile**.
 
 - **Hosted MCP endpoint (remote, streamable-HTTP):** `https://mcp.findagent.cloud/mcp`
 - **Official MCP Registry:** `cloud.findagent/marketplace`
@@ -80,7 +80,7 @@ This server is published to the [Official MCP Registry](https://registry.modelco
 
 ## Links
 
-- Marketplace: https://findagent.cloud/mcp
+- Store: https://findagent.cloud/mcp
 - How it works: https://findagent.cloud/how-it-works
-- Compare vs other MCP marketplaces: https://findagent.cloud/compare-marketplaces
+- Compare vs other MCP directories: https://findagent.cloud/compare-agent-stores
 - Machine-readable inventory: https://findagent.cloud/llms-full.txt
