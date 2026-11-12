@@ -9,9 +9,8 @@
  * knowledge-base tools), connect the hosted remote server over OAuth:
  *   https://mcp.findagent.cloud/mcp
  */
-import { Server } from '@modelcontextprotocol/sdk/server/index.js'
-import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
-import { CallToolRequestSchema, ListToolsRequestSchema } from '@modelcontextprotocol/sdk/types.js'
+import { Server } from '@modelcontextprotocol/server'
+import { serveStdio } from '@modelcontextprotocol/server/stdio'
 
 const BASE = (process.env.FINDAGENT_BASE_URL ?? 'https://findagent.cloud').replace(/\/+$/, '')
 const HOSTED_MCP = 'https://mcp.findagent.cloud/mcp'
@@ -51,11 +50,17 @@ async function fetchText(url) {
   return res.text()
 }
 
-const server = new Server({ name: 'findagent', version: '1.0.0' }, { capabilities: { tools: {} } })
+function buildServer() {
+  const server = new Server({ name: 'findagent', version: '1.0.0' }, { capabilities: { tools: {} } })
 
-server.setRequestHandler(ListToolsRequestSchema, async () => ({ tools: TOOLS }))
+  server.setRequestHandler('tools/list', async () => ({ tools: TOOLS }))
 
-server.setRequestHandler(CallToolRequestSchema, async (req) => {
+  server.setRequestHandler('tools/call', handleToolCall)
+
+  return server
+}
+
+async function handleToolCall(req) {
   const name = req.params.name
   const args = req.params.arguments ?? {}
 
@@ -78,7 +83,8 @@ server.setRequestHandler(CallToolRequestSchema, async (req) => {
   }
 
   throw new Error(`Unknown tool: ${name}`)
-})
+}
 
-const transport = new StdioServerTransport()
-await server.connect(transport)
+serveStdio(buildServer, {
+  onerror: (err) => process.stderr.write(`findagent-mcp: stdio transport error: ${err?.message ?? err}\n`),
+})
