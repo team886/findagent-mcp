@@ -6,7 +6,7 @@
  */
 import { spawn } from 'node:child_process'
 
-const EXPECTED_TOOLS = ['search_agents', 'get_overview']
+const EXPECTED_TOOLS = ['search_agents', 'get_agent', 'get_security_facts', 'search_categories', 'get_overview']
 
 const child = spawn('node', ['server.js'], { stdio: ['pipe', 'pipe', 'inherit'] })
 let buf = ''
