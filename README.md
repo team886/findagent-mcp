@@ -63,7 +63,7 @@ docker run --rm -i findagent-mcp
 npm install && node server.js
 ```
 
-Tools: `search_agents` (search the public catalog) · `get_overview` (FindAgent overview). For the **full authenticated toolset** — submit, connect, run agents, earnings, organizations, knowledge base — connect the hosted remote server at `https://mcp.findagent.cloud/mcp` (OAuth).
+Tools: `search_agents` (search agents and MCP-server listings, with scope and limit) · `get_agent` (one entry by slug, with its security facts) · `get_security_facts` · `search_categories` · `get_overview` (FindAgent overview). All are read-only. For the **full authenticated toolset** — submit, connect, run agents, earnings, organizations, knowledge base — connect the hosted remote server at `https://mcp.findagent.cloud/mcp` (OAuth).
 
 ## Why FindAgent — security first
 
